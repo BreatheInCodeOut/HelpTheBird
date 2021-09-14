@@ -1,0 +1,50 @@
+<div id="scoreCard">
+    <table id="instructions" border="1" cellpadding="5">
+        <tr>
+            <th>Instructions</th>
+        </tr>
+        <tr>
+            <td>
+                <li>Protect the bird from the scorpions to build the nest</li>
+                <li>Protect the nest from the eagle</li>
+                <li>Use bullets when it's absolutely necessary</li>
+                <li>Un-used bullets are carried forward to the next level</li>
+                <li>Bullets will be reloaded during each level</li>
+                <li>Arrow Keys (Up/Down/Left/Right) - to move the sniper</li>
+                <li>Enter Key - to destroy target once it's locked</li>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                <button *ngIf="showStart || showTryAgain" (click)="OnStart()"> 
+                    {{(showStart == true)? "Start the Game" : "Try Again"}}
+                </button>
+            </td>
+        </tr>
+        <tr>
+            <th>Level</th>
+        </tr>
+        <tr>
+            <td align="center">
+                <progress id ="level"  max="{{totalLevels}}" value="{{level-1}}"></progress>
+                <span> {{((level-1)/totalLevels)*100}} %</span>
+            </td>
+        </tr>
+        <tr>
+            <th>Score</th>
+        </tr>
+        <tr>
+            <td align="center">{{score}}</td>
+        </tr>
+        <tr>
+            <th>Bullets Left [{{arrBullets.length}}]</th>
+        </tr>
+        <tr>
+            <td align="center">
+                <span *ngFor="let item of arrBullets" style="margin:5px;background-color: red;">
+                    <img class = "bullet" src="../../assets/images/Bullet.png">
+                </span>
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,63 @@
+@import "../../styles/variables";
+
+#tree
+{
+    position:absolute;
+    width:420px;
+    left:$layout-left;
+    top:$layout-top;
+}
+
+#nest
+{
+    position:absolute;
+    top:40px;
+    left:$tree-nest-left;
+    display:none;
+}
+
+#nest > img
+{
+    width:80px;
+}
+
+#nestEgg
+{
+    position:absolute;
+    top:40px;
+    left:$tree-nest-left;
+    display:none;
+}
+
+#nestEgg > img
+{
+    width:80px;
+}
+
+#nestKids
+{
+    position:absolute;
+    top:50px;
+    left:$tree-nest-left;
+    display:none;
+}
+
+#nestKids > img {
+    width:80px;
+}
+
+
+#sparrowNest
+{
+    position:absolute;
+    top:95px;
+    left:$tree-nest-left;
+    z-index:0;
+    display:none;
+}
+
+#sparrowNest > img
+{
+    height:100px;
+    width:80px;
+}
